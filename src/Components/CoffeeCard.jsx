@@ -28,7 +28,7 @@ const CoffeeCard = ({ coffee,coffees,setCoffees}) => {
                                 'Your Coffee has been deleted.',
                                 'success'
                               )
-                              const remaining = coffees.filter(cof => cof._id !== _id);
+                              const remaining = coffees.filter(coffee => coffee._id !== _id);
                               setCoffees(remaining);
                         }
                     })
