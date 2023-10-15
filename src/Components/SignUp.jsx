@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import { Result } from "postcss";
-import { data } from "autoprefixer";
+ 
+ 
 
 const SignUp = () => {
 
@@ -10,15 +10,16 @@ const SignUp = () => {
     const handleSignup = event => {
         event.preventDefault();
         const form = event.target;
+        const name = form.name.value;
         const email = form.email.value;
-        const password = form.email.value;
+        const password = form.password.value;
         console.log(email, password);
-        createUser(email, password)
+        createUser( email, password)
             .then(result => {
                 console.log(result.user);
                 // new user has been created
                 const createdAt = result.user?.metadata?.creationTime;
-                const user = { email,createdAt:createdAt};
+                const user = { email,createdAt:createdAt,name};
                 fetch('http://localhost:5000/User', {
                     method: 'POST',
                     headers: {
@@ -30,7 +31,9 @@ const SignUp = () => {
                     .then(data => {
                         if(data.insrtedId){
                             console.log('User added to the database')
+                           
                         }
+                        form.reset();
                     })
             })
             .catch(error => {
@@ -46,6 +49,12 @@ const SignUp = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleSignup} className="card-body">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                        </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
