@@ -1,6 +1,6 @@
-# React + Vite
+# Coffee_Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ - Live Link: (https://coffee-store-de065.web.app/)
 
 Currently, two official plugins are available:
 
