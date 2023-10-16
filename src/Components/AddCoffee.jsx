@@ -18,7 +18,7 @@ const AddCoffee = () => {
         console.log(newCoffee)
 
         // send data to the server
-        fetch('http://localhost:5000/coffee',{
+        fetch('https://coffee-store-server-342e4j5i6-md-mostaq-muzahid-moins-projects.vercel.app/coffee',{
             method: 'POST',
             headers: {
                'content-type': 'application/json' 
@@ -45,7 +45,7 @@ const AddCoffee = () => {
             <form onSubmit={handleAddCoffee}>
                 {/* form name and quantity row */}
                 <div className="md:flex mb-8">
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
                             <span className="label-text">Coffee Name</span>
                         </label>
@@ -66,7 +66,7 @@ const AddCoffee = () => {
                 </div>
                 {/* form supplier row */}
                 <div className="md:flex mb-8">
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
                             <span className="label-text">Supplier Name</span>
                         </label>
@@ -87,7 +87,7 @@ const AddCoffee = () => {
                 </div>
                 {/* form category and details row */}
                 <div className="md:flex mb-8">
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
                             <span className="label-text">Category</span>
                         </label>
@@ -108,7 +108,7 @@ const AddCoffee = () => {
                 </div>
                 {/* form Photo url row */}
                 <div className="mb-8">
-                    <div className="form-control w-full">
+                    <div className="form-control w-full mx-4">
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
@@ -118,7 +118,7 @@ const AddCoffee = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Coffee" className="btn btn-block capitalize font-semibold text-xl" />
+                <input type="submit" value="Add Coffee" className="btn btn-block capitalize font-semibold text-xl mx-4" />
             </form>
         </div>
     );
