@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <App></App>,
-        loader: () => fetch('https://coffee-store-server-342e4j5i6-md-mostaq-muzahid-moins-projects.vercel.app/Coffee'),
+        loader: () => fetch('https://coffee-store-server-eta-five.vercel.app/Coffee'),
 
       },
       {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: '/updateCoffee/:id',
         element: <UpdateCoffee></UpdateCoffee>,
-        loader: ({ params }) => fetch(`https://coffee-store-server-342e4j5i6-md-mostaq-muzahid-moins-projects.vercel.app/Coffee/${params.id}`)
+        loader: ({ params }) => fetch(`https://coffee-store-server-eta-five.vercel.app/Coffee/${params.id}`)
       },
       {
         path: '/signup',
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       {
         path: '/users',
         element: <Users></Users>,
-        loader: () => fetch('https://coffee-store-server-342e4j5i6-md-mostaq-muzahid-moins-projects.vercel.app/user')
+        loader: () => fetch('https://coffee-store-server-eta-five.vercel.app/user')
       }
     ]
   }, 

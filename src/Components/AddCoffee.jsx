@@ -18,7 +18,7 @@ const AddCoffee = () => {
         console.log(newCoffee)
 
         // send data to the server
-        fetch('https://coffee-store-server-342e4j5i6-md-mostaq-muzahid-moins-projects.vercel.app/coffee',{
+        fetch('https://coffee-store-server-eta-five.vercel.app/coffee',{
             method: 'POST',
             headers: {
                'content-type': 'application/json' 
